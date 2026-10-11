@@ -1,0 +1,10 @@
+[package]
+name = "structure"
+version = "0.1.0"
+edition = "2021"
+description = "Station structure graph, tidal break-up, venting and Voronoi pre-fracture"
+
+[dependencies]
+glam = { workspace = true }
+relativity = { path = "../relativity" }
+bytemuck = { workspace = true }

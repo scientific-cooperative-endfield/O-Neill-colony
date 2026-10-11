@@ -1,0 +1,33 @@
+# Island Three (32 km × 8 km, spin 1 g) falls radially into Sgr A* (4.3·10⁶ M☉).
+# The structure graph is loaded by spin, air pressure and the exact tidal tensor;
+# the hull first snaps at r ≈ 5 M, the pieces keep spinning and drift apart.
+# The camera rides 80 km from the station (hybrid lensing: near field).
+name = "sgr_breakup"
+width = 960
+height = 540
+frames = 480
+dt = 0.0333333
+quality = "medium"
+mass_preset = 1
+capture = [0, 150, 200, 260, 340, 420, 479]
+[station]
+init = "rain"
+r0 = 7.0
+marker = 0.0
+hull = true
+axis = "radial"
+safety = 1.4
+[time]
+mode = "station"
+speed = 0.5
+unit = "M"
+[camera]
+kinematics = "station"
+[[camera.keys]]
+offset_km = 75.0
+look_station = true
+incl = 14.0
+azim = 35.0
+fov = 42.0
+[post]
+auto_exposure = true

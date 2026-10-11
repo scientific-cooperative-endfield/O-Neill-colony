@@ -1,0 +1,23 @@
+# Colony black-hole mode with a 10⁶ M☉ hole (M = 4.9 s): tides are 18× stronger at the same r/M than at
+# Sgr A*, so the hull is torn apart at r ≈ 4.15 M, ~23 s of station time after the start — before the
+# horizon (at Sgr A* the same orientation would only fail at 1.5 M, inside it).
+# `oneill_colony --blackhole colony_breakup`
+name = "colony_breakup"
+mass_preset = 1
+mass_solar = 1.0e6
+quality = "medium"
+# start 20° above the disk plane at r = 7 M, falling at the "rain" speed √(2M/r)
+[station]
+init = "custom"
+pos = [6.578, 0.0, 2.394]
+vel = [-0.5023, 0.0, -0.1828]
+axis = "normal"
+safety = 1.4
+[time]
+mode = "station"
+speed = 1.0
+unit = "s"
+[camera]
+kinematics = "station"
+[post]
+auto_exposure = false

@@ -1,0 +1,20 @@
+# Kerr–Schild tracer, static camera at r = 30 M, 82° inclination, spin a = 0.
+# a = 0 reproduces the Schwarzschild image (cross-check of the two tracers);
+# a = 0.9: the shadow is flattened and shifted, the prograde side of the disk
+# reaches down to the ISCO at 2.32 M.
+name = "kerr_a0"
+width = 960
+height = 540
+frames = 1
+quality = "medium"
+[disk]
+spin = 0
+[station]
+marker = 0.0
+[camera]
+kinematics = "static"
+[[camera.keys]]
+r = 30.0
+incl = 8.0
+azim = 0.0
+fov = 40.0

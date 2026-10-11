@@ -1,0 +1,65 @@
+# Demo "Полный цикл" (stage 9 cinematic camera, 150 s of real time at 60 FPS).
+# Station marker on an eccentric orbit (rp = 8M, ra = 30M) in the remote-observer
+# clock; the camera flies a Catmull-Rom spline from far away, around the hole,
+# down to 6M and back out. Render: --headless --scenario scenarios/demo.toml --out out/demo
+name = "demo"
+width = 1920
+height = 1080
+frames = 9000
+dt = 0.0166667
+quality = "high"
+capture = []
+[station]
+init = "elliptic"
+rp = 8.0
+ra = 30.0
+marker = 0.35
+[time]
+mode = "remote"
+speed = 6.0
+[camera]
+kinematics = "static"
+[[camera.keys]]
+time = 0.0
+r = 200.0
+incl = 25.0
+azim = -120.0
+fov = 35.0
+[[camera.keys]]
+time = 30.0
+r = 60.0
+incl = 12.0
+azim = -60.0
+fov = 45.0
+[[camera.keys]]
+time = 60.0
+r = 25.0
+incl = 3.0
+azim = 20.0
+fov = 55.0
+[[camera.keys]]
+time = 90.0
+r = 9.0
+incl = 6.0
+azim = 110.0
+fov = 80.0
+yaw = 20.0
+[[camera.keys]]
+time = 110.0
+r = 6.0
+incl = 30.0
+azim = 170.0
+fov = 90.0
+yaw = 35.0
+[[camera.keys]]
+time = 130.0
+r = 20.0
+incl = 70.0
+azim = 230.0
+fov = 60.0
+[[camera.keys]]
+time = 150.0
+r = 80.0
+incl = 15.0
+azim = 300.0
+fov = 40.0

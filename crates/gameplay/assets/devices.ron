@@ -1,0 +1,33 @@
+// Spacetime device ("искривитель"). Every activation adds instability;
+// activation fails with probability 1 − exp(−instability / failure_scale).
+(
+    capacity_j: 4.0e9,
+    recharge_w: 2.0e8,
+    instability_decay: 0.02,
+    failure_scale: 2.5,
+    cooldown_s: 2.0,
+    bubble: (
+        radius: 2.6,
+        barrier_j_per_kg: 1.8e5,   // reflects v_r < 600 m/s: stops pistol rounds, slows rifles
+        time_rate: 2.0,            // inside: 2 s of proper time per station second (faster reload / recovery)
+        duration_s: 6.0,
+        cost_j: 1.5e9,
+        instability: 0.35,
+    ),
+    micro_hole: (
+        mass_kg: 3.0e11,           // r_s = 4.5e-16 m, g = 5 m/s² at 2 m, Hawking ≈ 4 GW
+        launch_speed: 14.0,
+        containment_capacity_j: 3.0e10,
+        duration_s: 4.0,
+        cost_j: 2.5e9,
+        instability: 0.8,
+    ),
+    fold: (
+        mouth_radius: 0.9,
+        max_range: 80.0,
+        duration_s: 8.0,
+        throat_tidal: 6.0,
+        cost_j: 3.0e9,
+        instability: 0.6,
+    ),
+)

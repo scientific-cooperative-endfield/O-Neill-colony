@@ -1,0 +1,10 @@
+[package]
+name = "oneill_world"
+version = "0.1.0"
+edition = "2021"
+description = "O'Neill cylinder geometry, rotating frame, procedural world and colony ball/player physics (no GPU)"
+
+[dependencies]
+glam = { workspace = true }
+bytemuck = { workspace = true }
+log = { workspace = true }

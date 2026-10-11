@@ -1,0 +1,35 @@
+# Rust build output (Cargo.lock is committed for reproducible application builds)
+/target/
+**/target/
+
+# Generated output and cached sky maps
+/out/
+/assets/sky_*.bin
+/screenshot_*.png
+*.log
+
+# Python / Blender caches and backup files
+__pycache__/
+*.py[cod]
+*.blend1
+*.blend2
+
+# Local credentials and agent configuration
+.env
+.env.*
+!.env.example
+/.aws/
+/.agents/
+/.codex/
+
+# Editor / OS files
+/.idea/
+/.vscode/
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Locally prepared upload archives
+/oneill-github*.tar.gz

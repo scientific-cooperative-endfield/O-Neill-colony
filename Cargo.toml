@@ -1,0 +1,55 @@
+[package]
+name = "oneill_colony"
+version = "0.3.0"
+edition = "2021"
+default-run = "oneill_colony"
+description = "O'Neill cylinder colony simulator — wgpu + WGSL compute shaders"
+
+[workspace]
+members = [".", "crates/relativity", "crates/structure", "crates/oneill_world", "crates/gameplay", "crates/ai"]
+resolver = "2"
+
+[workspace.dependencies]
+glam = { version = "0.29", features = ["bytemuck"] }
+bytemuck = { version = "1.16", features = ["derive"] }
+log = "0.4"
+serde = { version = "1", features = ["derive"] }
+
+[dependencies]
+relativity = { path = "crates/relativity" }
+structure = { path = "crates/structure" }
+oneill_world = { path = "crates/oneill_world" }
+gameplay = { path = "crates/gameplay" }
+ai = { path = "crates/ai" }
+wgpu = "22.1"
+winit = "0.30"
+egui = "0.29"
+egui-wgpu = { version = "0.29", default-features = false }
+egui-winit = { version = "0.29", default-features = false, features = ["links", "wayland", "x11"] }
+glam = { version = "0.29", features = ["bytemuck"] }
+bytemuck = { version = "1.16", features = ["derive"] }
+pollster = "0.3"
+env_logger = "0.11"
+log = "0.4"
+anyhow = "1"
+png = "0.17"
+serde = { version = "1", features = ["derive"] }
+toml = "0.8"
+
+[[bin]]
+name = "gen_sky"
+path = "tools/gen_sky.rs"
+
+[dev-dependencies]
+naga = { version = "22.1", features = ["wgsl-in"] }
+
+[profile.release]
+opt-level = 3
+lto = "thin"
+codegen-units = 1
+panic = "abort"
+
+[profile.dev]
+opt-level = 1
+[profile.dev.package."*"]
+opt-level = 3

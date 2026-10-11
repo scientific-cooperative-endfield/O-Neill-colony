@@ -1,0 +1,21 @@
+# Control frame (stage 2): неподвижный наблюдатель на 10M, 8°
+name = "from_10m"
+width = 1280
+height = 720
+frames = 1
+quality = "high"
+[station]
+init = "elliptic"
+rp = 8.0
+ra = 30.0
+marker = 0.35
+[time]
+start = 120.0
+[camera]
+kinematics = "static"
+[[camera.keys]]
+r = 10.0
+incl = 8.0
+azim = -70.0
+fov = 90.0
+yaw = 25.0

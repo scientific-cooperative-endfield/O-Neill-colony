@@ -1,0 +1,8 @@
+[package]
+name = "relativity"
+version = "0.1.0"
+edition = "2021"
+description = "Schwarzschild geometry in Painlevé–Gullstrand coordinates: geodesics, proper time, tidal tensor, Paczyński–Wiita"
+
+[dependencies]
+glam = { workspace = true }

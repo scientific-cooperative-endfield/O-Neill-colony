@@ -1,0 +1,60 @@
+// Bot skill levels. All bots use the real ballistics; what differs is the
+// *internal model* they aim with and how human their hands are.
+//   coriolis_model: fraction of the Coriolis term the bot accounts for
+//                   (novice: none — at 500 m with the sniper that is a ~15 m miss)
+//   gravity_model / drag_model: same for spin "gravity" and air drag
+(
+    levels: [
+        (
+            name: "novice",
+            reaction_s: 0.65,
+            aim_error_mrad: 6.0,
+            turn_rate: 4.0,
+            coriolis_model: 0.0,
+            gravity_model: 1.0,
+            drag_model: false,
+            lead: 0.3,
+            fire_tolerance_mrad: 12.0,
+            vision_range: 350.0,
+            fov_deg: 100.0,
+            hearing_db: 45.0,
+            burst: 4,
+            device_use: 0.4,
+            caution: 0.3,
+        ),
+        (
+            name: "regular",
+            reaction_s: 0.4,
+            aim_error_mrad: 2.5,
+            turn_rate: 6.0,
+            coriolis_model: 0.5,
+            gravity_model: 1.0,
+            drag_model: true,
+            lead: 0.7,
+            fire_tolerance_mrad: 6.0,
+            vision_range: 600.0,
+            fov_deg: 110.0,
+            hearing_db: 38.0,
+            burst: 6,
+            device_use: 0.6,
+            caution: 0.55,
+        ),
+        (
+            name: "veteran",
+            reaction_s: 0.25,
+            aim_error_mrad: 0.8,
+            turn_rate: 9.0,
+            coriolis_model: 1.0,
+            gravity_model: 1.0,
+            drag_model: true,
+            lead: 1.0,
+            fire_tolerance_mrad: 2.5,
+            vision_range: 900.0,
+            fov_deg: 120.0,
+            hearing_db: 32.0,
+            burst: 8,
+            device_use: 0.8,
+            caution: 0.8,
+        ),
+    ],
+)

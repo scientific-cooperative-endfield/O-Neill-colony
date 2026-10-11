@@ -1,0 +1,21 @@
+# Control frame (stage 2): наблюдатель на 30M, 15° над диском
+name = "view_15deg"
+width = 1280
+height = 720
+frames = 1
+quality = "high"
+[station]
+init = "elliptic"
+rp = 8.0
+ra = 30.0
+marker = 0.35
+[time]
+start = 120.0
+[camera]
+kinematics = "static"
+[[camera.keys]]
+r = 30.0
+incl = 15.0
+azim = -70.0
+fov = 55.0
+yaw = 0.0

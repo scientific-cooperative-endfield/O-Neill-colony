@@ -1,0 +1,47 @@
+(
+    player: (
+        mass_kg: 95.0,          // body 80 kg + suit / kit 15 kg
+        radius: 0.32,
+        height: 1.80,
+        crouch_height: 1.20,
+        eye_below_top: 0.12,
+        walk_speed: 4.2,
+        run_speed: 7.5,
+        crouch_speed: 2.0,
+        friction: 0.9,
+        jump_speed: 2.7,        // ≈ 0.37 m jump in 1 g; 4× higher at 0.25 g
+        air_control: 0.6,
+        walk_min_g: 0.6,
+        max_slope_deg: 40.0,
+        step_height: 0.45,
+        mantle_height: 1.15,    // vault onto waist-high walls (arms push, not legs)
+        max_hp: 100.0,
+        suit_o2_s: 900.0,
+        mag_boot_n: 1500.0,
+        jetpack: (
+            thrust_n: 350.0,
+            isp_s: 170.0,       // catalytic H2O2 class
+            propellant_kg: 12.0,
+            max_turn_rate: 3.0,
+        ),
+    ),
+    damage: (
+        impact_safe: 7.5,       // ≈ 2.9 m drop in 1 g
+        impact_lethal: 17.0,    // ≈ 15 m drop in 1 g
+        hypoxia_kpa: 55.0,
+        armstrong_kpa: 6.3,
+        hypoxia_dps: 2.5,
+        ebullism_dps: 9.0,      // ~10 s of useful consciousness
+        barotrauma_kpa_s: 20.0,
+        barotrauma_dps_per_kpa_s: 0.6,
+        tidal_safe: 40.0,
+        tidal_dps_per: 0.8,
+        hp_per_gray: 18.0,      // ~5.5 Gy acute ≈ dead
+    ),
+    rules: (
+        time_limit_s: 600.0,
+        frag_limit: 40,
+        respawn_s: 3.0,
+        spawn_protection_s: 1.5,
+    ),
+)

@@ -1,0 +1,16 @@
+[package]
+name = "ai"
+version = "0.1.0"
+edition = "2021"
+description = "Bots for the O'Neill colony shooter: nav grid on the cylinder, zero-g steering, perception, Coriolis-aware aiming, utility AI. Produces the same Commands a human would."
+
+[dependencies]
+glam = { workspace = true }
+serde = { workspace = true }
+log = { workspace = true }
+ron = "0.8"
+gameplay = { path = "../gameplay" }
+
+[[bin]]
+name = "botmatch"
+path = "src/bin/botmatch.rs"

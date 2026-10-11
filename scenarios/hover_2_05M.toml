@@ -1,0 +1,19 @@
+# Control frame: observer HOVERING at r = 2.05 M (static, huge outward acceleration),
+# looking away from the hole. Aberration of the static observer (β ≈ 0.988 c relative
+# to the infalling frame) squeezes the whole sky into a small bright blue disc; the
+# shadow covers almost everything else.
+name = "hover_2_05M"
+width = 960
+height = 540
+frames = 1
+quality = "high"
+[station]
+marker = 0.0
+[camera]
+kinematics = "static"
+[[camera.keys]]
+r = 2.05
+incl = 3.0
+azim = 0.0
+fov = 120.0
+yaw = 180.0

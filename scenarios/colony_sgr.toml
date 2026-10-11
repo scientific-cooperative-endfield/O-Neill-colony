@@ -1,0 +1,23 @@
+# Colony black-hole mode (`oneill_colony --blackhole colony_sgr` or key B):
+# the colony itself falls from rest-at-infinity speed ("rain") at r = 7 M into
+# Sgr A* (4.3·10⁶ M☉, M = 21 s). The spin axis is normal to the fall, so the
+# hole and its disk sweep past the windows once per revolution (127 s).
+# Time runs on the station clock at ×1 in seconds: what the residents live through.
+name = "colony_sgr"
+mass_preset = 1
+quality = "medium"
+# start 20° above the disk plane at r = 7 M, falling at the "rain" speed √(2M/r)
+[station]
+init = "custom"
+pos = [6.578, 0.0, 2.394]
+vel = [-0.5023, 0.0, -0.1828]
+axis = "normal"
+safety = 1.4
+[time]
+mode = "station"
+speed = 1.0
+unit = "s"
+[camera]
+kinematics = "station"
+[post]
+auto_exposure = false

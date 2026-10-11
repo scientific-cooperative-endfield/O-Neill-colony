@@ -1,0 +1,18 @@
+# Control frame: observer FALLING freely (from rest at infinity) through r = 2.05 M,
+# same place and view direction as hover_2_05M. The sky is not infinitely blue: it is
+# spread over a large part of the view and only mildly shifted; the shadow is smaller.
+name = "fall_2_05M"
+width = 960
+height = 540
+frames = 1
+quality = "high"
+[station]
+marker = 0.0
+[camera]
+kinematics = "rain"
+[[camera.keys]]
+r = 2.05
+incl = 3.0
+azim = 0.0
+fov = 120.0
+yaw = 180.0

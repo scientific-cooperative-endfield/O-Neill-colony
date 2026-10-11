@@ -1,0 +1,24 @@
+# Radial fall of the station marker from rest at 12M, seen by a static observer at 30M.
+# mode = "remote": the marker slows down, reddens, dims and freezes above the horizon
+name = "fall_remote"
+width = 960
+height = 540
+frames = 241
+dt = 0.0166667
+quality = "medium"
+capture = [0, 60, 120, 180, 240]
+[station]
+init = "radial"
+r0 = 12.0
+marker = 0.6
+[time]
+mode = "remote"
+speed = 12.0
+unit = "M"
+[camera]
+kinematics = "static"
+[[camera.keys]]
+r = 30.0
+incl = 4.0
+azim = -90.0
+fov = 45.0
